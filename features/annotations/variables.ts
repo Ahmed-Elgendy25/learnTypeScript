@@ -41,7 +41,7 @@ let point: { x: number; y: number } = {
 
 //point is object variable  and the key-value pairs (x&y) inside it are a number
 
-// Function
+// variable type of function
 
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
@@ -86,3 +86,5 @@ for (let i = 0; i < numbers.length; i++) {
     numberAboveZero = numbers[i];
   }
 }
+
+// We will rely on inference as much as we can, but if something happened from 3 cases above we have to use annotations
