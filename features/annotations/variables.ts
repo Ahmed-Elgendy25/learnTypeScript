@@ -3,7 +3,7 @@
 // let variableName : dataType = value
 // ---> this is called Type annotations and there are different types of annotations;
 
-let apples = 5;
+let apples = 5; //This is called inference which auto define the type to variable
 let speed: string = 'fast';
 let hasName: boolean = true;
 let nothingMuch: null = null;
@@ -13,7 +13,7 @@ let nothing: undefined = undefined;
 // Built in objects
 let now: Date = new Date();
 
-// now variable is a type(i mean data type) "Date" and assigned to instance of Date Object
+// now variable is a type(i mean data type)  of "Date" and assigned to instance of Date Object
 
 // Array
 
@@ -30,7 +30,7 @@ class Car {}
 
 let car: Car = new Car();
 
-//car is variable which is instance of Car object with Type Car
+//car is variable which is instance of Car object with classType Car
 
 //Object literal
 
@@ -39,22 +39,25 @@ let point: { x: number; y: number } = {
   y: 20,
 };
 
-//point is variable which has object and the key-value pairs (x&y) inside it are a number
+//point is object variable  and the key-value pairs (x&y) inside it are a number
 
 // Function
 
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
-//1- function type "void" as it returns nothing
+// 1- function type "void" as it returns nothing
 // 2- type of argument is "number"
 
 // -------------------------------------------------------
 // When to use annotations//
+
 //1) Function that returns the 'any'type
 // IMPORTANT NOTE: TRY TO AVOID VARIABLES WITH 'ANY' AT ALL COSTS!
 
 const json = '{"x":10,"y":20}';
+// const coordinates = JSON.parse(json);
+
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates); //{x:10,y:20};
 
@@ -62,6 +65,7 @@ console.log(coordinates); //{x:10,y:20};
 // and initalize it later
 
 let words = ['red', 'green', 'blue'];
+// let foundWord
 let foundWord: boolean; //but this is bad practice , The good practice is -> let foundWord=false (to use inference) as we want to avoid annotations AS possible as we can.
 
 for (let i = 0; i < words.length; i++) {
