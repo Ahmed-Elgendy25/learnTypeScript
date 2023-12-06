@@ -17,17 +17,19 @@ const add = (a: number, b: number): number => {
   return a + b;
 };
 
-// traditional function
+// traditional function, AKA:Declarative or statement function
 function divide(a: number, b: number): number {
   return a / b;
 }
-// annonymous function assigned to a variable that will return a number
+// annonymous function assigned to a variable that will return a number,AKA expression also
+
 const multiply = function (a: number, b: number): number {
   return a * b;
 };
 
 const logger = (message: string): void => {
   console.log(message);
+  // return undefined;
 };
 
 const throwError = (message: string): string => {
