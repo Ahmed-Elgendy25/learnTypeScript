@@ -30,7 +30,7 @@ class Car {}
 
 let car: Car = new Car();
 
-//car is variable which is instance of Car object with classType Car
+//car is variable which is instance of Car class with classType Car
 
 //Object literal
 
